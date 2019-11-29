@@ -2,7 +2,7 @@ paytwallet
 =========
 
 paytwallet is a daemon handling payt wallet functionality for a
-single user.  It acts as both an RPC client to paytd and an RPC server
+single user.  It acts as both an RPC client to payt and an RPC server
 for wallet clients and legacy RPC applications.
 
 Public and private keys are derived using the hierarchical
@@ -12,10 +12,10 @@ deterministic format described by
 
 
 paytwallet is not an SPV client and requires connecting to a local or
-remote paytd instance for asynchronous blockchain queries and
-notifications over websockets.  Full paytd installation instructions
-can be found [here](https://github.com/paytia-dag/paytd).  An alternative
-SPV mode that is compatible with paytd and Bitcoin Core is planned for
+remote payt instance for asynchronous blockchain queries and
+notifications over websockets.  Full payt installation instructions
+can be found [here](https://github.com/payt-dag/payt).  An alternative
+SPV mode that is compatible with payt and Bitcoin Core is planned for
 a future release.
 
 Wallet clients can use one of two RPC servers:
@@ -44,9 +44,9 @@ Wallet clients can use one of two RPC servers:
 
 Install the latest MSIs available here:
 
-https://github.com/paytia-dag/paytd/releases
+https://github.com/payt-dag/payt/releases
 
-https://github.com/paytia-dag/paytwallet/releases
+https://github.com/payt-dag/paytwallet/releases
 
 ### Windows/Linux/BSD/POSIX - Build from source
 
@@ -80,8 +80,8 @@ For a first time installation, the project and dependency sources can be
 obtained manually with `git` and `glide` (create directories as needed):
 
 ```
-git clone https://github.com/paytia-dag/paytwallet $GOPATH/src/github.com/paytia-dag/paytwallet
-cd $GOPATH/src/github.com/paytia-dag/paytwallet
+git clone https://github.com/payt-dag/paytwallet $GOPATH/src/github.com/payt-dag/paytwallet
+cd $GOPATH/src/github.com/payt-dag/paytwallet
 glide install
 ```
 
@@ -89,7 +89,7 @@ To update an existing source tree, pull the latest changes and install the
 matching dependencies:
 
 ```
-cd $GOPATH/src/github.com/paytia-dag/paytwallet
+cd $GOPATH/src/github.com/payt-dag/paytwallet
 git pull
 glide install
 ```
@@ -123,13 +123,13 @@ go build
 ## Getting Started
 
 The following instructions detail how to get started with paytwallet connecting
-to a localhost paytd.  Commands should be run in `cmd.exe` or PowerShell on
+to a localhost payt.  Commands should be run in `cmd.exe` or PowerShell on
 Windows, or any terminal emulator on *nix.
 
-- Run the following command to start paytd:
+- Run the following command to start payt:
 
 ```
-paytd -u rpcuser -P rpcpass
+payt -u rpcuser -P rpcpass
 ```
 
 - Run the following command to create a wallet:
@@ -145,36 +145,36 @@ paytwallet -u rpcuser -P rpcpass
 ```
 
 If everything appears to be working, it is recommended at this point to
-copy the sample paytd and paytwallet configurations and update with your
+copy the sample payt and paytwallet configurations and update with your
 RPC username and password.
 
 PowerShell (Installed from MSI):
 ```
-PS> cp "$env:ProgramFiles\paytd Suite\paytd\sample-paytd.conf" $env:LOCALAPPDATA\paytd\paytd.conf
-PS> cp "$env:ProgramFiles\paytd Suite\paytwallet\sample-paytwallet.conf" $env:LOCALAPPDATA\paytwallet\paytwallet.conf
-PS> $editor $env:LOCALAPPDATA\paytd\paytd.conf
+PS> cp "$env:ProgramFiles\payt Suite\payt\sample-payt.conf" $env:LOCALAPPDATA\payt\payt.conf
+PS> cp "$env:ProgramFiles\payt Suite\paytwallet\sample-paytwallet.conf" $env:LOCALAPPDATA\paytwallet\paytwallet.conf
+PS> $editor $env:LOCALAPPDATA\payt\payt.conf
 PS> $editor $env:LOCALAPPDATA\paytwallet\paytwallet.conf
 ```
 
 PowerShell (Installed from source):
 ```
-PS> cp $env:GOPATH\src\github.com\paytia-dag\paytd\sample-paytd.conf $env:LOCALAPPDATA\paytd\paytd.conf
-PS> cp $env:GOPATH\src\github.com\paytia-dag\paytwallet\sample-paytwallet.conf $env:LOCALAPPDATA\paytwallet\paytwallet.conf
-PS> $editor $env:LOCALAPPDATA\paytd\paytd.conf
+PS> cp $env:GOPATH\src\github.com\payt-dag\payt\sample-payt.conf $env:LOCALAPPDATA\payt\payt.conf
+PS> cp $env:GOPATH\src\github.com\payt-dag\paytwallet\sample-paytwallet.conf $env:LOCALAPPDATA\paytwallet\paytwallet.conf
+PS> $editor $env:LOCALAPPDATA\payt\payt.conf
 PS> $editor $env:LOCALAPPDATA\paytwallet\paytwallet.conf
 ```
 
 Linux/BSD/POSIX (Installed from source):
 ```bash
-$ cp $GOPATH/src/github.com/paytia-dag/paytd/sample-paytd.conf ~/.paytd/paytd.conf
-$ cp $GOPATH/src/github.com/paytia-dag/paytwallet/sample-paytwallet.conf ~/.paytwallet/paytwallet.conf
-$ $EDITOR ~/.paytd/paytd.conf
+$ cp $GOPATH/src/github.com/payt-dag/payt/sample-payt.conf ~/.payt/payt.conf
+$ cp $GOPATH/src/github.com/payt-dag/paytwallet/sample-paytwallet.conf ~/.paytwallet/paytwallet.conf
+$ $EDITOR ~/.payt/payt.conf
 $ $EDITOR ~/.paytwallet/paytwallet.conf
 ```
 
 ## Issue Tracker
 
-The [integrated github issue tracker](https://github.com/paytia-dag/paytwallet/issues)
+The [integrated github issue tracker](https://github.com/payt-dag/paytwallet/issues)
 is used for this project.
 
 ## GPG Verification Key

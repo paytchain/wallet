@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2017 The btcsuite developers
 // Copyright (c) 2015 The Decred developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -13,8 +13,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 var (

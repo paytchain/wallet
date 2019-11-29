@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,9 +9,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	vp "github.com/paytia-dag/paytwallet/votingpool"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	vp "github.com/payt-dag/paytwallet/votingpool"
 )
 
 func TestStartWithdrawal(t *testing.T) {

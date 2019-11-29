@@ -1,5 +1,5 @@
 // Copyright (c) 2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,8 +8,8 @@
 package helpers
 
 import (
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/wire"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/wire"
 )
 
 // SumOutputValues sums up the list of TxOuts and returns an Amount.

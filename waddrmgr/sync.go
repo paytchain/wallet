@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,8 +8,8 @@ package waddrmgr
 import (
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // BlockStamp defines a block (by height and a unique hash) and is used to mark

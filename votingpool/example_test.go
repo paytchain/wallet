@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2014-2017 The btcsuite developers
- * Copyright (c) 2019 The paytia DAG developers
+ * Copyright (c) 2019 The payt DAG developers
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -25,14 +25,14 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytwallet/votingpool"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/paytwallet/votingpool"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/walletdb"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 var (

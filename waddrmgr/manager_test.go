@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -16,11 +16,11 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytwallet/snacl"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/paytwallet/snacl"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // failingCryptoKey is an implementation of the EncryptorDecryptor interface

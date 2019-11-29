@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,7 +8,7 @@ package votingpool_test
 import (
 	"testing"
 
-	vp "github.com/paytia-dag/paytwallet/votingpool"
+	vp "github.com/payt-dag/paytwallet/votingpool"
 )
 
 // TestErrorCodeStringer tests that all error codes has a text

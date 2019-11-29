@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,11 +9,11 @@
 // Full documentation of the API implemented by this package is maintained in a
 // language-agnostic document:
 //
-//   https://github.com/paytia-dag/paytwallet/blob/master/rpc/documentation/api.md
+//   https://github.com/payt-dag/paytwallet/blob/master/rpc/documentation/api.md
 //
 // Any API changes must be performed according to the steps listed here:
 //
-//   https://github.com/paytia-dag/paytwallet/blob/master/rpc/documentation/serverchanges.md
+//   https://github.com/payt-dag/paytwallet/blob/master/rpc/documentation/serverchanges.md
 package rpcserver
 
 import (
@@ -26,20 +26,20 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/internal/cfgutil"
-	"github.com/paytia-dag/paytwallet/internal/zero"
-	"github.com/paytia-dag/paytwallet/netparams"
-	pb "github.com/paytia-dag/paytwallet/rpc/walletrpc"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wallet"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/internal/cfgutil"
+	"github.com/payt-dag/paytwallet/internal/zero"
+	"github.com/payt-dag/paytwallet/netparams"
+	pb "github.com/payt-dag/paytwallet/rpc/walletrpc"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // Public API version constants
@@ -109,7 +109,7 @@ type walletServer struct {
 }
 
 // loaderServer provides RPC clients with the ability to load and close wallets,
-// as well as establishing a RPC connection to a paytd consensus server.
+// as well as establishing a RPC connection to a payt consensus server.
 type loaderServer struct {
 	loader    *wallet.Loader
 	activeNet *netparams.Params
@@ -505,7 +505,7 @@ func (s *walletServer) SignTransaction(ctx context.Context, req *pb.SignTransact
 
 // BUGS:
 // - The transaction is not inspected to be relevant before publishing using
-//   sendrawtransaction, so connection errors to paytd could result in the tx
+//   sendrawtransaction, so connection errors to payt could result in the tx
 //   never being added to the wallet database.
 // - Once the above bug is fixed, wallet will require a way to purge invalid
 //   transactions from the database when they are rejected by the network, other

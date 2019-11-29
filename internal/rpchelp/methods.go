@@ -1,5 +1,5 @@
 // Copyright (c) 2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,7 +8,7 @@
 package rpchelp
 
 import (
-	"github.com/paytia-dag/paytd/paytjson"
+	"github.com/payt-dag/payt/paytjson"
 )
 
 // Common return types.

@@ -1,5 +1,5 @@
 // Copyright (c) 2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -13,7 +13,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/paytia-dag/paytwallet/internal/rpchelp"
+	"github.com/payt-dag/paytwallet/internal/rpchelp"
 )
 
 var outputFile = func() *os.File {

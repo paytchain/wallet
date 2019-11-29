@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/payt"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	"github.com/paytia-dag/paytwallet/internal/zero"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/payt"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	"github.com/payt-dag/paytwallet/internal/zero"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // DerivationPath represents a derivation path from a particular key manager's

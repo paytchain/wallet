@@ -1,15 +1,15 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
 package votingpool
 
 import (
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 var TstLastErr = lastErr

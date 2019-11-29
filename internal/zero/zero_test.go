@@ -1,5 +1,5 @@
 // Copyright (c) 2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	. "github.com/paytia-dag/paytwallet/internal/zero"
+	. "github.com/payt-dag/paytwallet/internal/zero"
 )
 
 func makeOneBytes(n int) []byte {

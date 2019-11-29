@@ -1,6 +1,6 @@
 // Copyright (c) 2013-2017 The btcsuite developers
 // Copyright (c) 2016 The Decred developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -16,19 +16,19 @@ import (
 	"sync"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/payt"
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wallet"
-	"github.com/paytia-dag/paytwallet/wallet/txrules"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/payt"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/wallet/txrules"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 // confirmed checks whether a transaction at height txHeight has met minconf
@@ -491,7 +491,7 @@ func getBlockCount(icmd interface{}, w *wallet.Wallet) (interface{}, error) {
 // information about the current state of paytwallet.
 // exist.
 func getInfo(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) (interface{}, error) {
-	// Call down to paytd for all of the information in this command known
+	// Call down to payt for all of the information in this command known
 	// by them.
 	info, err := chainClient.GetInfo()
 	if err != nil {
@@ -561,7 +561,7 @@ func getAccount(icmd interface{}, w *wallet.Wallet) (interface{}, error) {
 
 // getAccountAddress handles a getaccountaddress by returning the most
 // recently-created chained address that has not yet been used (does not yet
-// appear in the blockchain, or any tx that has arrived in the paytd mempool).
+// appear in the blockchain, or any tx that has arrived in the payt mempool).
 // If the most recently-requested address has been used, a new address (the
 // next chained address in the keypool) is used.  This can fail if the keypool
 // runs out (and will return paytjson.ErrRPCWalletKeypoolRanOut if that happens).
@@ -962,17 +962,17 @@ func helpNoChainRPC(icmd interface{}, w *wallet.Wallet) (interface{}, error) {
 func help(icmd interface{}, w *wallet.Wallet, chainClient *chain.RPCClient) (interface{}, error) {
 	cmd := icmd.(*paytjson.HelpCmd)
 
-	// paytd returns different help messages depending on the kind of
+	// payt returns different help messages depending on the kind of
 	// connection the client is using.  Only methods availble to HTTP POST
 	// clients are available to be used by wallet clients, even though
-	// wallet itself is a websocket client to paytd.  Therefore, create a
+	// wallet itself is a websocket client to payt.  Therefore, create a
 	// POST client as needed.
 	//
 	// Returns nil if chainClient is currently nil or there is an error
 	// creating the client.
 	//
 	// This is hacky and is probably better handled by exposing help usage
-	// texts in a non-internal paytd package.
+	// texts in a non-internal payt package.
 	postClient := func() *rpcclient.Client {
 		if chainClient == nil {
 			return nil
@@ -1610,7 +1610,7 @@ func signRawTransaction(icmd interface{}, w *wallet.Wallet, chainClient *chain.R
 		return nil, InvalidParameterError{e}
 	}
 
-	// TODO: really we probably should look these up with paytd anyway to
+	// TODO: really we probably should look these up with payt anyway to
 	// make sure that they match the blockchain if present.
 	inputs := make(map[wire.OutPoint][]byte)
 	scripts := make(map[string][]byte)
@@ -1655,7 +1655,7 @@ func signRawTransaction(icmd interface{}, w *wallet.Wallet, chainClient *chain.R
 	}
 
 	// Now we go and look for any inputs that we were not provided by
-	// querying paytd with getrawtransaction. We queue up a bunch of async
+	// querying payt with getrawtransaction. We queue up a bunch of async
 	// requests and will wait for replies after we have checked the rest of
 	// the arguments.
 	requested := make(map[wire.OutPoint]rpcclient.FutureGetTxOutResult)

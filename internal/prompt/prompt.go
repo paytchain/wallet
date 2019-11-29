@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -14,8 +14,8 @@ import (
 	"strings"
 
 	"github.com/btcsuite/golangcrypto/ssh/terminal"
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	"github.com/paytia-dag/paytwallet/internal/legacy/keystore"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	"github.com/payt-dag/paytwallet/internal/legacy/keystore"
 )
 
 // ProvideSeed is used to prompt for the wallet seed which maybe required during

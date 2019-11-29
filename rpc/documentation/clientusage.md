@@ -52,12 +52,12 @@ import (
 	"fmt"
 	"path/filepath"
 
-	pb "github.com/paytia-dag/paytwallet/rpc/walletrpc"
+	pb "github.com/payt-dag/paytwallet/rpc/walletrpc"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 
-	"github.com/paytia-dag/paytd/paytutil"
+	"github.com/payt-dag/payt/paytutil"
 )
 
 var certificateFile = filepath.Join(btcutil.AppDataDir("btcwallet", false), "rpc.cert")

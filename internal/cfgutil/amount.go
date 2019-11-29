@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/paytia-dag/paytd/paytutil"
+	"github.com/payt-dag/payt/paytutil"
 )
 
 // AmountFlag embeds a paytutil.Amount and implements the flags.Marshaler and

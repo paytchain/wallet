@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 //
 // Permission to use, copy, modify, and distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
@@ -21,7 +21,7 @@ import (
 
 	"google.golang.org/grpc/grpclog"
 
-	"github.com/paytia-dag/paytd/paytlog"
+	"github.com/payt-dag/payt/paytlog"
 )
 
 // UseLogger sets the logger to use for the gRPC server.

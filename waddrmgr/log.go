@@ -1,6 +1,6 @@
 package waddrmgr
 
-import "github.com/paytia-dag/paytd/paytlog"
+import "github.com/payt-dag/payt/paytlog"
 
 // log is a logger that is initialized with no output filters.  This
 // means the package will not perform any logging by default until the caller

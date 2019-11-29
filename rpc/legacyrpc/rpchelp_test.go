@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 //
 // Permission to use, copy, modify, and distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
@@ -19,8 +19,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytwallet/internal/rpchelp"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/paytwallet/internal/rpchelp"
 )
 
 func serverMethods() map[string]struct{} {

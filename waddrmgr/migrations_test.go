@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // applyMigration is a helper function that allows us to assert the state of the

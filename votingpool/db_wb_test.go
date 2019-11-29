@@ -1,5 +1,5 @@
 // Copyright (c) 2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 func TestPutUsedAddrHash(t *testing.T) {

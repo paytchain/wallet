@@ -40,7 +40,7 @@ drop the wallet transaction manager (wtxmgr) history from a wallet database.
 The tool may already be installed in your PATH, but if not, installing it is easy:
 
 ```
-$ cd $GOPATH/src/github.com/paytia-dag/paytwallet/cmd/dropwtxmgr
+$ cd $GOPATH/src/github.com/payt-dag/paytwallet/cmd/dropwtxmgr
 $ go get
 ```
 

@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2017 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -12,13 +12,13 @@ import (
 	"path/filepath"
 
 	"github.com/jrick/logrotate/rotator"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/paytlog"
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/rpc/legacyrpc"
-	"github.com/paytia-dag/paytwallet/rpc/rpcserver"
-	"github.com/paytia-dag/paytwallet/wallet"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/paytlog"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/rpc/legacyrpc"
+	"github.com/payt-dag/paytwallet/rpc/rpcserver"
+	"github.com/payt-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 // logWriter implements an io.Writer that outputs to both standard output and

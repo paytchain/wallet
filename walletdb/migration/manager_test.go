@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	"github.com/paytia-dag/paytwallet/walletdb/migration"
+	"github.com/payt-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb/migration"
 )
 
 type mockMigrationManager struct {

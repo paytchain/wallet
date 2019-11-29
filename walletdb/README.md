@@ -43,27 +43,27 @@ boltdb project at https://github.com/boltdb/bolt by Ben B. Johnson.
 
 ## Documentation
 
-[![GoDoc](https://godoc.org/github.com/paytia-dag/paytwallet/walletdb?status.png)]
-(http://godoc.org/github.com/paytia-dag/paytwallet/walletdb)
+[![GoDoc](https://godoc.org/github.com/payt-dag/paytwallet/walletdb?status.png)]
+(http://godoc.org/github.com/payt-dag/paytwallet/walletdb)
 
 Full `go doc` style documentation for the project can be viewed online without
 installing this package by using the GoDoc site here:
-http://godoc.org/github.com/paytia-dag/paytwallet/walletdb
+http://godoc.org/github.com/payt-dag/paytwallet/walletdb
 
 You can also view the documentation locally once the package is installed with
 the `godoc` tool by running `godoc -http=":6060"` and pointing your browser to
-http://localhost:6060/pkg/github.com/paytia-dag/paytwallet/walletdb
+http://localhost:6060/pkg/github.com/payt-dag/paytwallet/walletdb
 
 ## Installation
 
 ```bash
-$ go get github.com/paytia-dag/paytwallet/walletdb
+$ go get github.com/payt-dag/paytwallet/walletdb
 ```
 
 ## Examples
 
 * [Basic Usage Example]
-  (http://godoc.org/github.com/paytia-dag/paytwallet/walletdb#example-package--BasicUsage)
+  (http://godoc.org/github.com/payt-dag/paytwallet/walletdb#example-package--BasicUsage)
   Demonstrates creating a new database, getting a namespace from it, and using a
   managed read-write transaction against the namespace to store and retrieve
   data.

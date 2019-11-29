@@ -9,14 +9,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 var (

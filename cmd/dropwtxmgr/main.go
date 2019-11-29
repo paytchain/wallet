@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -12,11 +12,11 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/walletdb"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 const defaultNet = "mainnet"

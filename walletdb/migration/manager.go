@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 var (

@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -14,9 +14,9 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/rpc/legacyrpc"
-	"github.com/paytia-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/rpc/legacyrpc"
+	"github.com/payt-dag/paytwallet/wallet"
 )
 
 var (
@@ -222,14 +222,14 @@ func readCAFile() []byte {
 	return certs
 }
 
-// startChainRPC opens a RPC client connection to a paytd server for blockchain
+// startChainRPC opens a RPC client connection to a payt server for blockchain
 // services.  This function uses the RPC options from the global config and
 // there is no recovery in case the server is not available or if there is an
 // authentication error.  Instead, all requests to the client will simply error.
 func startChainRPC(certs []byte) (*chain.RPCClient, error) {
 	log.Infof("Attempting RPC client connection to %v", cfg.RPCConnect)
 	rpcc, err := chain.NewRPCClient(activeNet.Params, cfg.RPCConnect,
-		cfg.paytdUsername, cfg.paytdPassword, certs, cfg.DisableClientTLS, 0)
+		cfg.paytUsername, cfg.paytPassword, certs, cfg.DisableClientTLS, 0)
 	if err != nil {
 		return nil, err
 	}

@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/lightninglabs/gozmq"
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/wire"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/wire"
 )
 
 // BitcoindConn represents a persistent client connection to a bitcoind node

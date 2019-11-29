@@ -1,15 +1,15 @@
 // Copyright (c) 2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
 package txsizes
 
 import (
-	"github.com/paytia-dag/paytd/blockchain"
-	"github.com/paytia-dag/paytd/wire"
+	"github.com/payt-dag/payt/blockchain"
+	"github.com/payt-dag/payt/wire"
 
-	h "github.com/paytia-dag/paytwallet/internal/helpers"
+	h "github.com/payt-dag/paytwallet/internal/helpers"
 )
 
 // Worst case script and input/output size estimates.

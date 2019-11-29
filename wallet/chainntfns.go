@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -11,13 +11,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 const (
@@ -52,7 +52,7 @@ func (w *Wallet) handleChainNotifications() {
 		// TODO(aakselrod): There's a race conditon here, which
 		// happens when a reorg occurs between the
 		// rescanProgress notification and the last GetBlockHash
-		// call. The solution when using paytd is to make paytd
+		// call. The solution when using payt is to make payt
 		// send blockconnected notifications with each block
 		// the way Neutrino does, and get rid of the loop. The
 		// other alternative is to check the final hash and,

@@ -1,6 +1,6 @@
 // Copyright (c) 2013-2017 The btcsuite developers
 // Copyright (c) 2015-2016 The Decred developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,12 +10,12 @@ import (
 	"bytes"
 	"time"
 
-	"github.com/paytia-dag/paytd/blockchain"
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/payt/blockchain"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // Block contains the minimum amount of data to uniquely identify any block on

@@ -1,6 +1,6 @@
 // Copyright (c) 2013-2017 The btcsuite developers
 // Copyright (c) 2015-2016 The Decred developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -18,23 +18,23 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/paytia-dag/paytd/blockchain"
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/payt"
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/paytutil/hdkeychain"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/chain"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wallet/txauthor"
-	"github.com/paytia-dag/paytwallet/wallet/txrules"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	"github.com/paytia-dag/paytwallet/walletdb/migration"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/blockchain"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/payt"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/paytutil/hdkeychain"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/chain"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wallet/txauthor"
+	"github.com/payt-dag/paytwallet/wallet/txrules"
+	"github.com/payt-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb/migration"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 const (
@@ -478,7 +478,7 @@ func (w *Wallet) scanChain(startHeight int32,
 	}
 
 	// isCurrent is a helper function that we'll use to determine if the
-	// chain backend is currently synced. When running with a paytd or
+	// chain backend is currently synced. When running with a payt or
 	// bitcoind backend, it will use the height of the latest checkpoint as
 	// its lower bound.
 	var latestCheckptHeight int32
@@ -1583,7 +1583,7 @@ func (w *Wallet) CalculateAccountBalances(account uint32, confirms int32) (Balan
 // CurrentAddress gets the most recently requested payt payment address
 // from a wallet for a particular key-chain scope.  If the address has already
 // been used (there is at least one transaction spending to it in the
-// blockchain or paytd mempool), the next chained address is returned.
+// blockchain or payt mempool), the next chained address is returned.
 func (w *Wallet) CurrentAddress(account uint32, scope waddrmgr.KeyScope) (paytutil.Address, error) {
 	chainClient, err := w.requireChainClient()
 	if err != nil {
@@ -3415,7 +3415,7 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 	// If the transaction is already in the mempool, we can just return now.
 	//
 	// This error is returned when broadcasting/sending a transaction to a
-	// paytd node that already has it in their mempool.
+	// payt node that already has it in their mempool.
 	case strings.Contains(err.Error(), "already have transaction"):
 		fallthrough
 
@@ -3430,7 +3430,7 @@ func (w *Wallet) publishTransaction(tx *wire.MsgTx) (*chainhash.Hash, error) {
 	// in a sense successful.
 	//
 	// This error is returned when broadcasting/sending a transaction that
-	// has already confirmed to a paytd node.
+	// has already confirmed to a payt node.
 	case strings.Contains(err.Error(), "transaction already exists"):
 		fallthrough
 

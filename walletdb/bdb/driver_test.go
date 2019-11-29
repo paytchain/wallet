@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -11,8 +11,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/paytia-dag/paytwallet/walletdb"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/paytwallet/walletdb"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 )
 
 // dbType is the database type name for this driver.

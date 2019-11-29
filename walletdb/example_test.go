@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -11,8 +11,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/paytia-dag/paytwallet/walletdb"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/paytwallet/walletdb"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 )
 
 // This example demonstrates creating a new database.
@@ -20,8 +20,8 @@ func ExampleCreate() {
 	// This example assumes the bdb (bolt db) driver is imported.
 	//
 	// import (
-	// 	"github.com/paytia-dag/paytwallet/walletdb"
-	// 	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	// 	"github.com/payt-dag/paytwallet/walletdb"
+	// 	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.
@@ -103,8 +103,8 @@ func Example_basicUsage() {
 	// This example assumes the bdb (bolt db) driver is imported.
 	//
 	// import (
-	// 	"github.com/paytia-dag/paytwallet/walletdb"
-	// 	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	// 	"github.com/payt-dag/paytwallet/walletdb"
+	// 	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 	// )
 
 	// Create a database and schedule it to be closed and removed on exit.

@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 )
 
 var (

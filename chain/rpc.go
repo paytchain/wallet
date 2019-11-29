@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,16 +10,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/paytutil/gcs"
-	"github.com/paytia-dag/paytd/paytutil/gcs/builder"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/paytutil/gcs"
+	"github.com/payt-dag/payt/paytutil/gcs/builder"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 // RPCClient represents a persistent client connection to a payt RPC server
@@ -90,7 +90,7 @@ func NewRPCClient(chainParams *chaincfg.Params, connect, user, pass string, cert
 
 // BackEnd returns the name of the driver.
 func (c *RPCClient) BackEnd() string {
-	return "paytd"
+	return "payt"
 }
 
 // Start attempts to establish a client connection with the remote server.

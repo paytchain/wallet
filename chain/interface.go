@@ -3,11 +3,11 @@ package chain
 import (
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 // BackEnds returns a list of the available back ends.
@@ -15,13 +15,13 @@ import (
 func BackEnds() []string {
 	return []string{
 		"bitcoind",
-		"paytd",
+		"payt",
 		"neutrino",
 	}
 }
 
 // Interface allows more than one backing blockchain source, such as a
-// paytd RPC chain server, or an SPV library, as long as we write a driver for
+// payt RPC chain server, or an SPV library, as long as we write a driver for
 // it.
 type Interface interface {
 	Start() error

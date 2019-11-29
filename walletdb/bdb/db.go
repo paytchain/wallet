@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,7 +10,7 @@ import (
 	"os"
 
 	"github.com/coreos/bbolt"
-	"github.com/paytia-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb"
 )
 
 // convertErr converts some bolt errors to the equivalent walletdb error.

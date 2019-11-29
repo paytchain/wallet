@@ -1,11 +1,11 @@
 // Copyright (c) 2013-2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
 package netparams
 
-import "github.com/paytia-dag/paytd/chaincfg"
+import "github.com/payt-dag/payt/chaincfg"
 
 // Params is used to group parameters for various networks such as the main
 // network and test networks.
@@ -16,7 +16,7 @@ type Params struct {
 }
 
 // MainNetParams contains parameters specific running paytwallet and
-// paytd on the main network (wire.MainNet).
+// payt on the main network (wire.MainNet).
 var MainNetParams = Params{
 	Params:        &chaincfg.MainNetParams,
 	RPCClientPort: "8334",
@@ -24,7 +24,7 @@ var MainNetParams = Params{
 }
 
 // TestNet1Params contains parameters specific running paytwallet and
-// paytd on the test network (version 1) (wire.TestNet1).
+// payt on the test network (version 1) (wire.TestNet1).
 var TestNet1Params = Params{
 	Params:        &chaincfg.TestNet1Params,
 	RPCClientPort: "18334",

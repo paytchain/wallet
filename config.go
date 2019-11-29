@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2017 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -8,11 +8,11 @@ package main
 import (
 	"fmt"
 	"github.com/jessevdk/go-flags"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytwallet/internal/cfgutil"
-	"github.com/paytia-dag/paytwallet/internal/legacy/keystore"
-	"github.com/paytia-dag/paytwallet/netparams"
-	"github.com/paytia-dag/paytwallet/wallet"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/paytwallet/internal/cfgutil"
+	"github.com/payt-dag/paytwallet/internal/legacy/keystore"
+	"github.com/payt-dag/paytwallet/netparams"
+	"github.com/payt-dag/paytwallet/wallet"
 	"net"
 	"os"
 	"os/user"
@@ -23,7 +23,7 @@ import (
 )
 
 const (
-	defaultCAFilename       = "paytd.cert"
+	defaultCAFilename       = "payt.cert"
 	defaultConfigFilename   = "paytwallet.conf"
 	defaultLogLevel         = "info"
 	defaultLogDirname       = "logs"
@@ -35,7 +35,7 @@ const (
 )
 
 var (
-	paytdDefaultCAFile = filepath.Join(paytutil.AppDataDir("paytd", false), "rpc.cert")
+	paytDefaultCAFile = filepath.Join(paytutil.AppDataDir("payt", false), "rpc.cert")
 	defaultAppDataDir   = paytutil.AppDataDir("paytwallet", false)
 	defaultConfigFile   = filepath.Join(defaultAppDataDir, defaultConfigFilename)
 	defaultRPCKeyFile   = filepath.Join(defaultAppDataDir, "rpc.key")
@@ -61,11 +61,11 @@ type config struct {
 	WalletPass string `long:"walletpass" default-mask:"-" description:"The public wallet password -- Only required if the wallet was created with one"`
 
 	// RPC client options
-	RPCConnect       string                  `short:"c" long:"rpcconnect" description:"Hostname/IP and port of paytd RPC server to connect to (default localhost:8334, testnet: localhost:18334, simnet: localhost:18556)"`
-	CAFile           *cfgutil.ExplicitString `long:"cafile" description:"File containing root certificates to authenticate a TLS connections with paytd"`
+	RPCConnect       string                  `short:"c" long:"rpcconnect" description:"Hostname/IP and port of payt RPC server to connect to (default localhost:8334, testnet: localhost:18334, simnet: localhost:18556)"`
+	CAFile           *cfgutil.ExplicitString `long:"cafile" description:"File containing root certificates to authenticate a TLS connections with payt"`
 	DisableClientTLS bool                    `long:"noclienttls" description:"Disable TLS for the RPC client -- NOTE: This is only allowed if the RPC client is connecting to localhost"`
-	paytdUsername   string                  `long:"paytdusername" description:"Username for paytd authentication"`
-	paytdPassword   string                  `long:"paytdpassword" default-mask:"-" description:"Password for paytd authentication"`
+	paytUsername   string                  `long:"paytusername" description:"Username for payt authentication"`
+	paytPassword   string                  `long:"paytpassword" default-mask:"-" description:"Password for payt authentication"`
 	Proxy            string                  `long:"proxy" description:"Connect via SOCKS5 proxy (eg. 127.0.0.1:9050)"`
 	ProxyUser        string                  `long:"proxyuser" description:"Username for proxy server"`
 	ProxyPass        string                  `long:"proxypass" default-mask:"-" description:"Password for proxy server"`
@@ -85,8 +85,8 @@ type config struct {
 	LegacyRPCListeners     []string                `long:"rpclisten" description:"Listen for legacy RPC connections on this interface/port (default port: 8332, testnet: 18332, simnet: 18554)"`
 	LegacyRPCMaxClients    int64                   `long:"rpcmaxclients" description:"Max number of legacy RPC clients for standard connections"`
 	LegacyRPCMaxWebsockets int64                   `long:"rpcmaxwebsockets" description:"Max number of legacy RPC websocket connections"`
-	Username               string                  `short:"u" long:"username" description:"Username for legacy RPC and paytd authentication (if paytdusername is unset)"`
-	Password               string                  `short:"P" long:"password" default-mask:"-" description:"Password for legacy RPC and paytd authentication (if paytdpassword is unset)"`
+	Username               string                  `short:"u" long:"username" description:"Username for legacy RPC and payt authentication (if paytusername is unset)"`
+	Password               string                  `short:"P" long:"password" default-mask:"-" description:"Password for legacy RPC and payt authentication (if paytpassword is unset)"`
 
 	// EXPERIMENTAL RPC server options
 	//
@@ -513,12 +513,12 @@ func loadConfig() (*config, []string, error) {
 			return nil, nil, err
 		}
 	} else {
-		// If CAFile is unset, choose either the copy or local paytd cert.
+		// If CAFile is unset, choose either the copy or local payt cert.
 		if !cfg.CAFile.ExplicitlySet() {
 			cfg.CAFile.Value = filepath.Join(cfg.AppDataDir.Value, defaultCAFilename)
 
 			// If the CA copy does not exist, check if we're connecting to
-			// a local paytd and switch to its RPC cert if it exists.
+			// a local payt and switch to its RPC cert if it exists.
 			certExists, err := cfgutil.FileExists(cfg.CAFile.Value)
 			if err != nil {
 				fmt.Fprintln(os.Stderr, err)
@@ -526,14 +526,14 @@ func loadConfig() (*config, []string, error) {
 			}
 			if !certExists {
 				if _, ok := localhostListeners[RPCHost]; ok {
-					paytdCertExists, err := cfgutil.FileExists(
-						paytdDefaultCAFile)
+					paytCertExists, err := cfgutil.FileExists(
+						paytDefaultCAFile)
 					if err != nil {
 						fmt.Fprintln(os.Stderr, err)
 						return nil, nil, err
 					}
-					if paytdCertExists {
-						cfg.CAFile.Value = paytdDefaultCAFile
+					if paytCertExists {
+						cfg.CAFile.Value = paytDefaultCAFile
 					}
 				}
 			}
@@ -624,15 +624,15 @@ func loadConfig() (*config, []string, error) {
 	cfg.RPCCert.Value = cleanAndExpandPath(cfg.RPCCert.Value)
 	cfg.RPCKey.Value = cleanAndExpandPath(cfg.RPCKey.Value)
 
-	// If the paytd username or password are unset, use the same auth as for
-	// the client.  The two settings were previously shared for paytd and
+	// If the payt username or password are unset, use the same auth as for
+	// the client.  The two settings were previously shared for payt and
 	// client auth, so this avoids breaking backwards compatibility while
-	// allowing users to use different auth settings for paytd and wallet.
-	if cfg.paytdUsername == "" {
-		cfg.paytdUsername = cfg.Username
+	// allowing users to use different auth settings for payt and wallet.
+	if cfg.paytUsername == "" {
+		cfg.paytUsername = cfg.Username
 	}
-	if cfg.paytdPassword == "" {
-		cfg.paytdPassword = cfg.Password
+	if cfg.paytPassword == "" {
+		cfg.paytPassword = cfg.Password
 	}
 
 	// Warn about missing config file after the final command line parse

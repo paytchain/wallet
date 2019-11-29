@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/wtxmgr"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/wtxmgr"
 )
 
 // createTx is a helper method to create random transactions that spend

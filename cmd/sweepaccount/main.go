@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -14,16 +14,16 @@ import (
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/paytia-dag/paytd/chaincfg/chainhash"
-	"github.com/paytia-dag/paytd/rpcclient"
-	"github.com/paytia-dag/paytd/paytjson"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/internal/cfgutil"
-	"github.com/paytia-dag/paytwallet/netparams"
-	"github.com/paytia-dag/paytwallet/wallet/txauthor"
-	"github.com/paytia-dag/paytwallet/wallet/txrules"
+	"github.com/payt-dag/payt/chaincfg/chainhash"
+	"github.com/payt-dag/payt/rpcclient"
+	"github.com/payt-dag/payt/paytjson"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/internal/cfgutil"
+	"github.com/payt-dag/paytwallet/netparams"
+	"github.com/payt-dag/paytwallet/wallet/txauthor"
+	"github.com/payt-dag/paytwallet/wallet/txrules"
 )
 
 var (

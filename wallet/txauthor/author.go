@@ -1,5 +1,5 @@
 // Copyright (c) 2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -9,14 +9,14 @@ package txauthor
 import (
 	"errors"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/wallet/txrules"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/wallet/txrules"
 
-	h "github.com/paytia-dag/paytwallet/internal/helpers"
-	"github.com/paytia-dag/paytwallet/wallet/internal/txsizes"
+	h "github.com/payt-dag/paytwallet/internal/helpers"
+	"github.com/payt-dag/paytwallet/wallet/internal/txsizes"
 )
 
 // InputSource provides transaction inputs referencing spendable outputs to

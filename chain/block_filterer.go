@@ -1,11 +1,11 @@
 package chain
 
 import (
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/waddrmgr"
 )
 
 // BlockFilterer is used to iteratively scan blocks for a set of addresses of

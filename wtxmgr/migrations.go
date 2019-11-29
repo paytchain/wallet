@@ -1,8 +1,8 @@
 package wtxmgr
 
 import (
-	"github.com/paytia-dag/paytwallet/walletdb"
-	"github.com/paytia-dag/paytwallet/walletdb/migration"
+	"github.com/payt-dag/paytwallet/walletdb"
+	"github.com/payt-dag/paytwallet/walletdb/migration"
 )
 
 // versions is a list of the different database versions. The last entry should

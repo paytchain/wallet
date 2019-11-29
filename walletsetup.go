@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -12,16 +12,16 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/paytia-dag/paytd/chaincfg"
-	"github.com/paytia-dag/paytd/payt"
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/wire"
-	"github.com/paytia-dag/paytwallet/internal/legacy/keystore"
-	"github.com/paytia-dag/paytwallet/internal/prompt"
-	"github.com/paytia-dag/paytwallet/waddrmgr"
-	"github.com/paytia-dag/paytwallet/wallet"
-	"github.com/paytia-dag/paytwallet/walletdb"
-	_ "github.com/paytia-dag/paytwallet/walletdb/bdb"
+	"github.com/payt-dag/payt/chaincfg"
+	"github.com/payt-dag/payt/payt"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/wire"
+	"github.com/payt-dag/paytwallet/internal/legacy/keystore"
+	"github.com/payt-dag/paytwallet/internal/prompt"
+	"github.com/payt-dag/paytwallet/waddrmgr"
+	"github.com/payt-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/walletdb"
+	_ "github.com/payt-dag/paytwallet/walletdb/bdb"
 )
 
 // networkDir returns the directory name of a network directory to hold wallet

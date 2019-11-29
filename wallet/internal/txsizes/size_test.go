@@ -5,8 +5,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/paytia-dag/paytd/wire"
-	. "github.com/paytia-dag/paytwallet/wallet/internal/txsizes"
+	"github.com/payt-dag/payt/wire"
+	. "github.com/payt-dag/paytwallet/wallet/internal/txsizes"
 )
 
 const (

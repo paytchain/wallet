@@ -1,5 +1,5 @@
 // Copyright (c) 2013-2015 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytwallet/rpc/legacyrpc"
-	"github.com/paytia-dag/paytwallet/rpc/rpcserver"
-	"github.com/paytia-dag/paytwallet/wallet"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/paytwallet/rpc/legacyrpc"
+	"github.com/payt-dag/paytwallet/rpc/rpcserver"
+	"github.com/payt-dag/paytwallet/wallet"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )

@@ -1,5 +1,5 @@
 // Copyright (c) 2016 The btcsuite developers
-// Copyright (c) 2019 The paytia DAG developers
+// Copyright (c) 2019 The payt DAG developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,9 +10,9 @@ package txrules
 import (
 	"errors"
 
-	"github.com/paytia-dag/paytd/paytutil"
-	"github.com/paytia-dag/paytd/txscript"
-	"github.com/paytia-dag/paytd/wire"
+	"github.com/payt-dag/payt/paytutil"
+	"github.com/payt-dag/payt/txscript"
+	"github.com/payt-dag/payt/wire"
 )
 
 // DefaultRelayFeePerKb is the default minimum relay fee policy for a mempool.

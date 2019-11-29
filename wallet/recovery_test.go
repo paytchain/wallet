@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/paytia-dag/paytwallet/wallet"
+	"github.com/payt-dag/paytwallet/wallet"
 )
 
 // Harness holds the BranchRecoveryState being tested, the recovery window being
